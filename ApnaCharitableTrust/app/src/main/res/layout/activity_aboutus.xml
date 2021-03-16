@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/listPreferredItemHeight"
+        android:layout_alignParentTop="true"
+        android:background="@color/blue"
+        android:minHeight="?attr/listPreferredItemHeight">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/img_back"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/back_2"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/rl_back"
+            android:gravity="left"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/arialbold"
+            android:text="About Us"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="RtlHardcoded" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/rl_chair"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/chariman"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/profile_2"/>
+                <TextView
+                    android:id="@+id/txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/chariman"
+                    android:fontFamily="@font/arialmedium"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="Founder &amp; Chairman"/>
+                <TextView
+                    android:id="@+id/txt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt1"
+                    android:fontFamily="@font/arialmedium"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="Sri P.Anil Kumar Reddy"/>
+                <TextView
+                    android:id="@+id/txt_chair_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt2"
+                    android:fontFamily="@font/arialmedium"
+                    android:textSize="15sp"
+                    android:layout_marginTop="25dp"
+                    android:text="I Mr. P Anil Kumar Reddy is very proud to say that i served in Indian Army for 17 years. I would like to serve the society in my future. I have established a trust in the name of Apna Charitable Trust “Joy of Giving “. In the year 13th Oct 2015. The main purpose of establishing this trust is to help for the poor people, we are sure to attain and achieve peace, happiness and satisfaction. As old saying goes “Serving Human beings is equal to serving God”."/>
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/li_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/rl_chair">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arialmedium"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:text="Chairman Message"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/button_orange"
+                    android:backgroundTint="#ffee8e">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/arialmedium"
+                        android:textSize="14sp"
+                        android:layout_margin="15dp"
+                        android:text="When we look at society, there are so many things that disturb and distract us. Many times we decide and come to conclusion that we want to do something for the society to make society a better way to live. We are living in a world where competition is in full swing in all the area of life. We are competing with each other in everything. There is less scope for service in the society. We are deaf to the needs of the poor.\n\n
+We are here to give our best services spending our full time in this filed through “ Apna Charitable Trust “ with your cooperation, collaboration and financial assistance, we work towards this goal. Please help us so that we may help many more poor people. I am glad to say that there is good news to all those donors who are helping us will get the exemption in income tax u/s 80g. We request the donors to come forward to be part of this trust and help us for which we are ever grateful to you."/>
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arialmedium"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Our Team Members"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arialmedium"
+                    android:textSize="12sp"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Apna Charitable Trust Members"/>
+
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/li_msg"
+                android:clipToPadding="true"
+                android:nestedScrollingEnabled="false"
+                android:layout_centerHorizontal="true"
+                tools:listitem="@layout/item_flow_view"/>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cd"
+        android:layout_marginTop="10dp"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="7dp">
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:scaleType="fitXY"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@android:drawable/ic_menu_gallery" />
+
+    </androidx.cardview.widget.CardView>
+    <RelativeLayout
+        android:elevation="10dp"
+        android:layout_marginLeft="-10dp"
+        android:layout_toRightOf="@id/cd"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        tools:ignore="RtlHardcoded">
+
+        <ImageView
+            android:id="@+id/delPic"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/circle_border" />
+
+        <ImageView
+            android:id="@+id/crossMark"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/cncel"
+            android:backgroundTint="@android:color/darker_gray" />
+    </RelativeLayout>
+</RelativeLayout>

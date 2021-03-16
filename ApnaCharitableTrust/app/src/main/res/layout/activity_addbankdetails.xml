@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/listPreferredItemHeight"
+        android:layout_alignParentTop="true"
+        android:background="@color/blue"
+        android:minHeight="?attr/listPreferredItemHeight">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/img_back"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/back_2"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/rl_back"
+            android:gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/arialbold"
+            android:text="Upload Bank Details"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="RtlHardcoded" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:isScrollContainer="true"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/CustomLinearLayout">
+                <TextView
+                    style="@style/CustomTextView"
+                    android:text="@string/name_as_per_bank"
+                    android:textColor="#000000" />
+                <EditText
+                    style="@style/CustomEditText"
+                    android:inputType="textPersonName"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@id/acNumber"
+                    android:id="@+id/name"
+                    tools:ignore="Autofill,LabelFor" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/CustomLinearLayout">
+                <TextView
+                    style="@style/CustomTextView"
+                    android:text="@string/account_number"
+                    android:textColor="#000000"/>
+                <!--<EditText
+                    style="@style/CustomEditText"
+                    android:inputType="numberPassword"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@id/acNumber2"
+                    android:id="@+id/acNumber" />-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/edit_box">
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:fontFamily="@font/arialmedium"
+                        android:layout_weight="1"
+                        android:imeOptions="actionNext"
+                        android:nextFocusDown="@id/acNumber2"
+                        android:id="@+id/acNumber"
+                        android:inputType="numberPassword"
+                        android:selectAllOnFocus="true"
+                        android:paddingLeft="10dp"
+                        android:background="@null"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:ignore="LabelFor,RtlHardcoded,RtlSymmetry"
+                        android:importantForAutofill="no" />
+                    <RelativeLayout
+                        android:id="@+id/rl_eye"
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1">
+                        <ImageView
+                            android:id="@+id/img_pswd_eye"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/eye_off"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/CustomLinearLayout">
+                <TextView
+                    style="@style/CustomTextView"
+                    android:text="@string/reaccount_number"
+                    android:textColor="#000000"/>
+                <!--<EditText
+                    style="@style/CustomEditText"
+                    android:inputType="numberPassword"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@id/bankName"
+                    android:id="@+id/acNumber2" />-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/edit_box">
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:fontFamily="@font/arialmedium"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:nextFocusDown="@id/bankName"
+                        android:id="@+id/acNumber2"
+                        android:inputType="numberPassword"
+                        android:selectAllOnFocus="true"
+                        android:paddingLeft="10dp"
+                        android:background="@null"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:ignore="LabelFor,RtlHardcoded,RtlSymmetry"
+                        android:importantForAutofill="no" />
+                    <RelativeLayout
+                        android:id="@+id/rl_eye_cfrm"
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1">
+                        <ImageView
+                            android:id="@+id/img_pswd_eye_cnfrm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/eye_off"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/CustomLinearLayout">
+                <TextView
+                    style="@style/CustomTextView"
+                    android:text="@string/bank_name"
+                    android:textColor="#000000"/>
+                <AutoCompleteTextView
+                    android:id="@+id/bankName"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_box"
+                    android:imeOptions="actionNext"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:inputType="textCapSentences"
+                    android:nextFocusDown="@id/branchName"
+                    android:popupBackground="@android:drawable/dialog_holo_light_frame"
+                    tools:ignore="LabelFor,RtlHardcoded,RtlSymmetry" />
+
+                <!--<EditText
+                    style="@style/CustomEditText"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@id/branchName"
+                    android:id="@+id/bankName" />-->
+            </LinearLayout>
+            <LinearLayout style="@style/CustomLinearLayout">
+                <TextView
+                    style="@style/CustomTextView"
+                    android:text="@string/branch_name"
+                    android:textColor="#000000"/>
+                <EditText
+                    style="@style/CustomEditText"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@id/ifsCode"
+                    android:id="@+id/branchName"
+                    tools:ignore="LabelFor,TextFields"
+                    android:importantForAutofill="no" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/CustomLinearLayout">
+                <TextView
+                    style="@style/CustomTextView"
+                    android:text="@string/ifsc_code"
+                    android:textColor="#000000"/>
+                <EditText
+                    style="@style/CustomEditText"
+                    android:inputType="textCapCharacters"
+                    android:textAllCaps="true"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@id/villageMandel"
+                    android:id="@+id/ifsCode"
+                    tools:ignore="LabelFor"
+                    android:importantForAutofill="no" />
+            </LinearLayout>
+            <LinearLayout style="@style/CustomLinearLayout">
+                <TextView
+                    style="@style/CustomTextView"
+                    android:text="@string/village_mandel"
+                    android:textColor="#000000"/>
+                <EditText
+                    style="@style/CustomEditText"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@id/dist"
+                    android:inputType="text"
+                    android:id="@+id/villageMandel"
+                    tools:ignore="LabelFor"
+                    android:importantForAutofill="no" />
+            </LinearLayout>
+            <LinearLayout style="@style/CustomLinearLayout">
+                <TextView
+                    style="@style/CustomTextView"
+                    android:text="@string/dist"
+                    android:textColor="#000000"/>
+                <EditText
+                    style="@style/CustomEditText"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@id/state"
+                    android:id="@+id/dist"
+                    tools:ignore="LabelFor"
+                    android:importantForAutofill="no" />
+            </LinearLayout>
+            <LinearLayout style="@style/CustomLinearLayout">
+                <TextView
+                    style="@style/CustomTextView"
+                    android:text="@string/state"
+                    android:textColor="#000000"/>
+                <EditText
+                    style="@style/CustomEditText"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:id="@+id/state"
+                    tools:ignore="LabelFor"
+                    android:importantForAutofill="no" />
+            </LinearLayout>
+            <!--<LinearLayout style="@style/CustomLinearLayout">
+                <TextView
+                    style="@style/CustomTextView"
+                    android:text="@string/email"
+                    android:textColor="#000000"/>
+                <EditText
+                    style="@style/CustomEditText"
+                    android:inputType="textEmailAddress"
+                    android:imeOptions="actionDone"
+                    android:nextFocusDown="@id/upload"
+                    android:id="@+id/email" />
+            </LinearLayout>-->
+            <Button
+                android:layout_marginTop="20dp"
+                style="@style/CustomBottomButton"
+                android:id="@+id/upload"
+                android:text="@string/upload"
+                tools:ignore="OnClick" />
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/cancel"
+                style="@style/CustomBottomButton"
+                android:text="@string/cancel"
+                android:layout_marginBottom="20dp"/>
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

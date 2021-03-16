@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "819286745834",
+    "project_id": "apna-charitable-trust",
+    "storage_bucket": "apna-charitable-trust.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819286745834:android:6e1d88514b46e882fc2d93",
+        "android_client_info": {
+          "package_name": "com.vedas.apna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "819286745834-7vs2jrrnh5ots299idl70atgk0dtee4a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhsj0Mglhd1QNXv7addnPVn-t6GAqL5lU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "819286745834-7vs2jrrnh5ots299idl70atgk0dtee4a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

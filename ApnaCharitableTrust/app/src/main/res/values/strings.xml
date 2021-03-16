@@ -1,0 +1,98 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Apna\nCharitable\nTrust</string>
+    <!-- Strings related to login -->
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Login</string>
+    <string name="indians"><font color="#F44336">INDIANS</font>\n\n<font color="#3F51B5">FOR </font>\n\n<font color="#4CAF50">INDIANS</font></string>
+    <string name="Apna_number">9533669922</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!--<string name="link"><a href="https://www.google.com/maps/place/ApnaCharitable+Trust/@14.6897,77.594354,17z/data=!4m5!3m4!1s0x0:0x1b4c50527e1cc9b8!8m2!3d14.6897003!4d77.5943542?hl=en">Google</a></string>-->
+
+    <string name="notification_channel_id">com.vedas.apna.test</string>
+
+    <string-array name="Education">
+        <item>We Conduct vocational and professional courses.</item>
+        <item>Provide Education materials for poor students.</item>
+        <item>Financial support to BPL students.</item>
+    </string-array>
+
+    <string-array name="Medical_Camps">
+        <item>We Conduct medical, eye, dental and blood donation camps.</item>
+        <item>Run Ambulance service, pharmacy stores, Clinical Labs and Blood Banks.</item>
+        <item>Minor and Major operations for BPL patients.</item>
+    </string-array>
+
+    <string-array name="Rural_Development_Programs">
+        <item>To conduct crop development Programme.</item>
+        <item>Construct Minor check dams and farmer clubs.</item>
+        <item>Financial support for irrigation bore wells, waste land development, livestock and horticulture etc..</item>
+    </string-array>
+
+    <string-array name="Sports_Programs">
+        <item>We Conduct sports and games.</item>
+        <item>Distribution of Sports and Game Materials.</item>
+        <item>Financial support for sport persons.</item>
+    </string-array>
+
+    <string-array name="Cultural_Programs">
+        <item>We conduct cultural Programmes.</item>
+        <item>Distribution of cultural related materials.</item>
+        <item>Financial support for cultural Programmes</item>
+    </string-array>
+
+    <string-array name="Emergency_Relief">
+        <item>Maintain quick reaction team help for victims of fire, flood and accidents.</item>
+        <item>Provide free food, clothes, medicine and accommodation Shelters.</item>
+    </string-array>
+
+    <string name="name_as_per_bank">NAME AS PER BANK</string>
+    <string name="account_number">ACCOUNT NUMBER</string>
+    <string name="reaccount_number">CONFIRM ACCOUNT NUMBER</string>
+    <string name="bank_name">BANK NAME</string>
+    <string name="branch_name">BRANCH NAME</string>
+    <string name="ifsc_code">IFSC CODE</string>
+    <string name="village_mandel">VILLAGE/MANDAL</string>
+    <string name="dist">DISTRICT</string>
+    <string name="state">STATE</string>
+    <string name="upload">UPLOAD</string>
+    <string name="cancel" tools:ignore="ButtonCase">CANCEL</string>
+
+    <string-array name="Bank_list">
+        <item>Bank of Baroda</item>
+        <item>Bank of India</item>
+        <item>Bank of Maharashtra</item>
+        <item>Canara Bank</item>
+        <item>Central Bank of India</item>
+        <item>Indian Bank</item>
+        <item>Indian Overseas Bank</item>
+        <item>Punjab &amp; Sind Bank</item>
+        <item>Punjab National Bank</item>
+        <item>State Bank of India</item>
+        <item>UCO Bank</item>
+        <item>Union Bank of India</item>
+        <item>Axis Bank Ltd</item>
+        <item>Bandhan Bank Ltd</item>
+        <item>CSB Bank Ltd</item>
+        <item>City Union Bank Ltd</item>
+        <item>DCB Bank Ltd</item>
+        <item>Dhanlaxmi Bank Ltd</item>
+        <item>Federal Bank Ltd</item>
+        <item>HDFC Bank Ltd</item>
+        <item>ICICI Bank Ltd</item>
+        <item>Induslnd Bank Ltd</item>
+        <item>IDFC First Bank Ltd</item>
+        <item>Jammu &amp; Kashmir Bank Ltd</item>
+        <item>Karnataka Bank Ltd</item>
+        <item>Karur Vysya Bank Ltd</item>
+        <item>Kotak Mahindra Bank Ltd</item>
+        <item>Lakshmi Vilas Bank Ltd</item>
+        <item>Nainital Bank Ltd</item>
+        <item>RBL Bank Ltd</item>
+        <item>South Indian Bank Ltd</item>
+        <item>Tamilnad Mercantile Bank Ltd</item>
+        <item>YES Bank Ltd</item>
+        <item>IDBI Bank Ltd</item>
+    </string-array>
+
+</resources>

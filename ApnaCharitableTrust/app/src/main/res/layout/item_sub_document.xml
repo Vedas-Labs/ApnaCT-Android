@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/li_doc"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/edit_box"
+        tools:ignore="UselessParent">
+        <ImageView
+            android:id="@+id/img_doc"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/document" />
+        <TextView
+            android:id="@+id/txt_doc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/arialmedium"
+            android:textSize="18sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="Documents"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+</RelativeLayout>

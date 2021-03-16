@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/listPreferredItemHeight"
+        android:layout_alignParentTop="true"
+        android:background="@color/blue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:minHeight="?attr/listPreferredItemHeight">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/img_back"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/back_2" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/rl_back"
+            android:gravity="left"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/arialbold"
+            android:text="Contact Us"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:ignore="RtlHardcoded">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:src="@drawable/address"/>
+            <TextView
+                android:id="@+id/txt_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arialmedium"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textAllCaps="true"
+                android:lineSpacingExtra="6dp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:autoLink="web"
+                android:text="APNA CHARITABLE TRUST\nD.No:13-2-213, Flat No:501\nsiva Sai apartment,\nRama Chandra Nagar,\nAnantapur-515 001,\nANDHRA PRADESH, INDIA."
+                tools:ignore="HardcodedText,RtlHardcoded" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/phone" />
+            <TextView
+                android:id="@+id/txt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arialmedium"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:autoLink="phone"
+                android:background="@null"
+                android:textColorLink="?android:attr/textColorSecondary"
+                android:textColor="?android:attr/textColorSecondary"
+                android:text="+91 9533669922"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/mail" />
+            <TextView
+                android:id="@+id/txt_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arialmedium"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:autoLink="email"
+                android:background="@null"
+                android:textColorHighlight="@android:color/transparent"
+                android:textColorLink="?android:attr/textColorSecondary"
+                android:textColor="?android:attr/textColorSecondary"
+                android:text="apnacharitabletrust2015@gmail.com"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/globe"/>
+            <TextView
+                android:id="@+id/txt_web"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arialmedium"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:autoLink="web"
+                android:background="@null"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textColorLink="?android:attr/textColorSecondary"
+                android:text="https://apnacharitabletrust.org/#/home"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

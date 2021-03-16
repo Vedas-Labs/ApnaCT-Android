@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/img_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/back_1" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/logo_1"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_rest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset Password"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/arialbold"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo"
+        tools:ignore="HardcodedText" />
+    <LinearLayout
+        android:id="@+id/li_pswd"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/edit_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_rest">
+        <EditText
+            android:id="@+id/ed_pswd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/arialregular"
+            android:inputType="textPassword"
+            android:layout_weight="1"
+            android:background="@null"
+            android:imeOptions="actionDone"
+            android:textColor="@color/black"
+            android:hint="New Password"
+            android:selectAllOnFocus="true"
+            android:paddingLeft="10dp"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry"
+            android:importantForAutofill="no" />
+        <RelativeLayout
+            android:id="@+id/rl_eye"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1">
+            <ImageView
+                android:id="@+id/img_pswd_eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/eye_off" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/li_reset_pswd"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/li_pswd">
+        <EditText
+            android:id="@+id/new_pswd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/arialregular"
+            android:inputType="textPassword"
+            android:layout_weight="1"
+            android:background="@null"
+            android:imeOptions="actionDone"
+            android:textColor="@color/black"
+            android:hint="Confirm New Password"
+            android:selectAllOnFocus="true"
+            android:paddingLeft="10dp"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry"
+            android:importantForAutofill="no" />
+        <RelativeLayout
+            android:id="@+id/rl_set_eye"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1">
+            <ImageView
+                android:id="@+id/img_setpswd_eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/eye_off" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:text="Done"
+        android:background="@drawable/btn_orange"
+        app:backgroundTint="@color/orange"
+        android:textColor="@color/white"
+        android:textAllCaps="true"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/arialbold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/li_reset_pswd"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

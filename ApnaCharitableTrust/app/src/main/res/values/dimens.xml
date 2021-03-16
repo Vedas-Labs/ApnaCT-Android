@@ -1,0 +1,4 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="simpletooltip_padding">5dp</dimen>
+</resources>

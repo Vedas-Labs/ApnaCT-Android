@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/rl_pic"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/blue"
+            android:visibility="visible">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_pic"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/profile_1"
+                tools:ignore="RtlHardcoded" />
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/img_pic"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_centerVertical="true"
+                android:text="Member Name"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/rl_pic"/>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

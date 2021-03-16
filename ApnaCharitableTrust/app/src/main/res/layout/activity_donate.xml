@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/listPreferredItemHeight"
+        android:layout_alignParentTop="true"
+        android:background="@color/blue"
+        android:minHeight="?attr/listPreferredItemHeight">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/img_back"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/back_2"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/rl_back"
+            android:fontFamily="@font/arialbold"
+            android:gravity="left"
+            android:text="Donatations"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="5dp">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_online"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_weight="1"
+                android:checked="true"
+                android:fontFamily="@font/arialmedium"
+                android:paddingLeft="8dp"
+                android:text="Online"
+                android:textAllCaps="true"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+            <RadioButton
+                android:id="@+id/radio_offline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/arialmedium"
+                android:paddingLeft="8dp"
+                android:text="Offline"
+                android:textAllCaps="true"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+        </RadioGroup>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGroup"
+            android:fillViewport="true"
+            android:fitsSystemWindows="true"
+            android:isScrollContainer="true"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/CustomLinearLayout">
+
+                    <TextView
+                        style="@style/CustomTextView"
+                        android:text="REFERENCE MEMBERSHIP ID(Mobile Number)"
+                        android:textColor="#000000"
+                        tools:ignore="HardcodedText" />
+                    <RelativeLayout
+                        android:id="@+id/li_who"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:weightSum="3"
+                        android:background="@drawable/edit_box"
+                        android:orientation="horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/img_ref"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/profile_2"
+                            tools:ignore="RtlHardcoded" />
+
+                        <EditText
+                            android:id="@+id/mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/img_ref"
+                            android:layout_toLeftOf="@+id/next_loading"
+                            android:fontFamily="@font/arialregular"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:focusableInTouchMode="true"
+                            android:digits="0123456789"
+                            android:imeOptions="actionDone"
+                            android:paddingLeft="10dp"
+                            android:textSize="14sp"
+                            android:autofillHints=""
+                            tools:ignore="LabelFor,RtlHardcoded,RtlSymmetry" />
+                        <RelativeLayout
+                            android:id="@+id/next_loading"
+                            android:layout_width="40dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true">
+
+                            <ImageView
+                                android:id="@+id/img_next"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_centerVertical="true"
+                                android:rotation="180"
+                                android:visibility="gone"
+                                android:background="@drawable/back_1"/>
+                            <com.wang.avi.AVLoadingIndicatorView
+                                android:id="@+id/avi"
+                                style="@style/AVLoadingIndicatorView"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:visibility="gone"
+                                app:indicatorColor="@color/blue"
+                                app:indicatorName="BallClipRotateIndicator" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout style="@style/CustomLinearLayout">
+
+                    <TextView
+                        style="@style/CustomTextView"
+                        android:text="DONATOR NAME"
+                        android:textColor="#000000"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/dName"
+                        style="@style/CustomEditText"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:nextFocusDown="@id/dMobile"
+                        tools:ignore="LabelFor"
+                        android:importantForAutofill="no" />
+                </LinearLayout>
+                <LinearLayout style="@style/CustomLinearLayout">
+
+                    <TextView
+                        style="@style/CustomTextView"
+                        android:text="DONATOR MOBILE NUMBER"
+                        android:textColor="#000000"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/dMobile"
+                        style="@style/CustomEditText"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:nextFocusDown="@id/pan"
+                        tools:ignore="LabelFor"
+                        android:importantForAutofill="no" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/CustomLinearLayout">
+
+                    <TextView
+                        style="@style/CustomTextView"
+                        android:text="PAN NUMBER(For your IT returns purpose must enter Pan Number)"
+                        android:textColor="#000000"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/pan"
+                        style="@style/CustomEditText"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapCharacters"
+                        android:nextFocusDown="@id/emailid"
+                        tools:ignore="LabelFor"
+                        android:importantForAutofill="no" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/CustomLinearLayout">
+
+                    <TextView
+                        style="@style/CustomTextView"
+                        android:text="EMAIL ID"
+                        android:textColor="#000000"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/emailid"
+                        style="@style/CustomEditText"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:nextFocusDown="@id/address"
+                        tools:ignore="LabelFor"
+                        android:importantForAutofill="no" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/CustomLinearLayout">
+
+                    <TextView
+                        style="@style/CustomTextView"
+                        android:text="ADDRESS"
+                        android:textColor="#000000"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/address"
+                        style="@style/CustomEditText"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPostalAddress"
+                        android:nextFocusDown="@id/dAmount"
+                        tools:ignore="LabelFor"
+                        android:importantForAutofill="no" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/CustomLinearLayout">
+
+                    <TextView
+                        android:id="@+id/txt_donate"
+                        style="@style/CustomTextView"
+                        android:drawablePadding="10dp"
+                        android:text="DONATION AMOUNT"
+                        android:textColor="#000000"
+                        app:drawableRightCompat="@drawable/info"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/dAmount"
+                        style="@style/CustomEditText"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        tools:ignore="LabelFor"
+                        android:importantForAutofill="no" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/li_deposit"
+                    style="@style/CustomLinearLayout"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/CustomTextView"
+                        android:text="DEPOSIT FROM"
+                        android:textColor="#000000"
+                        tools:ignore="HardcodedText" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/edit_box">
+
+                        <Spinner
+                            android:id="@+id/spin_deposit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/background_spinner"
+                            android:fontFamily="@font/arialmedium"
+                            android:paddingLeft="10dp"
+                            android:popupBackground="@android:drawable/dialog_holo_light_frame"
+                            android:spinnerMode="dropdown"
+                            android:textSize="14sp"
+                            android:visibility="visible"
+                            tools:ignore="RtlHardcoded,RtlSymmetry" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/recepitupload"
+                    style="@style/CustomLinearLayout"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/CustomTextView"
+                        android:text="RECEPIT UPLOAD (Can upload max 3 images)"
+                        android:textColor="#000000"
+                        tools:ignore="HardcodedText" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/picRecycler"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:id="@+id/galleryPics"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="10dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/group_1799" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/li_trans"
+                    style="@style/CustomLinearLayout"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/CustomTextView"
+                        android:text="TRANSACTION DATE"
+                        android:textColor="#000000"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/tran_date"
+                        style="@style/CustomEditText"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        tools:ignore="LabelFor,TextFields"
+                        android:importantForAutofill="no" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/CustomLinearLayout">
+
+                    <TextView
+                        style="@style/CustomTextView"
+                        android:text="DONATION AMOUNT SPENT TO"
+                        android:textColor="#000000"
+                        tools:ignore="HardcodedText" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/edit_box">
+
+                        <Spinner
+                            android:id="@+id/spin"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/background_spinner"
+                            android:fontFamily="@font/arialmedium"
+                            android:paddingLeft="10dp"
+                            android:popupBackground="@android:drawable/dialog_holo_light_frame"
+                            android:spinnerMode="dropdown"
+                            android:textSize="14sp"
+                            android:visibility="visible"
+                            tools:ignore="RtlHardcoded,RtlSymmetry" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/submit"
+                    style="@style/CustomBottomButton"
+                    android:layout_marginTop="20dp"
+                    android:text="SUBMIT DONATION"
+                    tools:ignore="HardcodedText,OnClick" />
+
+                <Button
+                    android:id="@+id/cancel"
+                    style="@style/CustomBottomButton"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/cancel" />
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

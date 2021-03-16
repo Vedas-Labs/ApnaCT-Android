@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:elevation="1dp"
+        android:background="@drawable/btn_orange"
+        android:backgroundTint="@color/vpi__bright_foreground_inverse_holo_light"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+            <TextView
+                android:id="@+id/membershipId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="Membership ID :"
+                android:fontFamily="@font/arialbold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/donarName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="Donar Name :"
+                android:fontFamily="@font/arialbold"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/donationAmount"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="Donation Amount :"
+                android:fontFamily="@font/arialbold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="Date :"
+                android:fontFamily="@font/arialbold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="Time :"
+                android:fontFamily="@font/arialbold"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/sharedAmount"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="Shared Amount(20%) :"
+                android:fontFamily="@font/arialbold"
+                tools:ignore="HardcodedText" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/listPreferredItemHeight"
+        android:layout_alignParentTop="true"
+        android:background="@color/blue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:minHeight="?attr/listPreferredItemHeight">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/img_back"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/back_2" />
+        </RelativeLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_pic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/profile_1"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/img_pic"
+            android:layout_toLeftOf="@+id/rl_edit"
+            android:gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/arialbold"
+            android:text="Member Name"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+        <RelativeLayout
+            android:id="@+id/rl_edit"
+            android:layout_width="50dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="15dp"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            tools:ignore="RtlHardcoded">
+
+            <ImageView
+                android:id="@+id/img_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/edit"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_circle"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@drawable/circle_border"
+        android:backgroundTint="@color/orange"
+        android:text="Upload\nBank\n Details"
+        android:textSize="20sp"
+        android:elevation="5dp"
+        android:fontFamily="@font/arialmedium"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:lineSpacingExtra="10dp"
+        android:textColor="@color/white"
+        android:gravity="center_vertical|center_horizontal"
+        android:textAlignment="gravity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        tools:ignore="HardcodedText" />
+
+    <RelativeLayout
+        android:id="@+id/rl_month"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_month"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:background="@drawable/btn_orange"
+                app:backgroundTint="@color/orange"
+                android:text="January"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/arialmedium"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/direct"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/member_box"
+                android:text="Direct Donation 20% Receives RS.00.00"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:textAllCaps="true"
+                android:gravity="start|center_vertical"
+                android:layout_gravity="center_horizontal"
+                android:textSize="13sp"
+                android:fontFamily="@font/arialmedium"
+                tools:ignore="HardcodedText" />
+            <Button
+                android:id="@+id/indirect"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/member_box"
+                android:text="InDirect Donation 5% Receives RS.00.00"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textAllCaps="true"
+                android:gravity="start|center_vertical"
+                android:layout_gravity="center_horizontal"
+                android:textSize="13sp"
+                android:fontFamily="@font/arialmedium"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/btn_secondary"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_orange"
+                android:text="Secondary Members List"
+                android:textSize="13sp"
+                android:textAllCaps="true"
+                android:fontFamily="@font/arialmedium"
+                app:backgroundTint="@color/vpi__bright_foreground_inverse_holo_light"
+                tools:ignore="HardcodedText" />
+            <Button
+                android:id="@+id/btn_Perivous"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/btn_orange"
+                android:text="Pervious Months Donations"
+                android:textSize="13sp"
+                android:textAllCaps="true"
+                android:fontFamily="@font/arialmedium"
+                app:backgroundTint="@color/vpi__bright_foreground_inverse_holo_light"
+                tools:ignore="HardcodedText" />
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_orange"
+                android:text="Back"
+                android:textSize="15sp"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:fontFamily="@font/arialbold"
+                app:backgroundTint="@color/orange"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

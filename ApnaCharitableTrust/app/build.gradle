@@ -1,0 +1,117 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+}
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.vedas.apna"
+        minSdkVersion 24
+        //noinspection OldTargetApi
+        targetSdkVersion 29
+        versionCode 6
+        versionName "1.0.5"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            debugSymbolLevel 'FULL'
+        }
+    }
+    aaptOptions { cruncherEnabled = false }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+
+    //noinspection DifferentStdlibGradleVersion
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    //noinspection GradleDependency
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    //noinspection GradleDependency
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    //noinspection GradleDependency
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    //Retrofit library
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    //implementation 'com.squareup.okhttp3:okhttp:3.12.1'
+    //CircleImageview Library
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //Glide Bumptech glide library
+    implementation("com.github.bumptech.glide:glide:4.9.0") {
+        exclude group: "com.android.support"
+    }
+    //picasso library
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    //cropping library
+    implementation 'com.github.yalantis:ucrop:2.2.2'
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+    //Zooming image library
+    implementation 'com.commit451:PhotoView:1.2.4'
+    //Loading library
+    implementation 'com.wang.avi:library:2.1.3'
+    //OTP edit text fields
+    implementation 'com.poovam:pin-edittext-field:1.2.3'
+    //Dexter permission library
+    implementation 'com.karumi:dexter:5.0.0'
+    //carouselview
+    implementation 'com.synnapps:carouselview:0.1.5'
+    // Flexbox text layout autofit text in recyclerview
+    //implementation 'com.google.android:flexbox:2.0.1'
+    //Month & Year Picker library
+    implementation 'com.github.dewinjm:monthyear-picker:1.0.2'
+    //Information tooltips library
+    implementation 'com.github.douglasjunior:android-simple-tooltip:1.0.0-rc.0'
+    //Universal image loader
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    //Paytm SDK library
+    /*implementation('com.paytm:pgplussdk:1.4.4') {
+        transitive = true;
+    }*/
+    // paytm all in one sdk
+    //noinspection GradleDependency
+    implementation 'com.paytm.appinvokesdk:appinvokesdk:1.5'
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:26.4.0')
+    // Add the dependency for the Firebase SDK for Google Analytics
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-messaging-ktx'
+   // implementation 'android.arch.work:work-runtime:1.0.1'
+    //Playstore app updates library
+    //implementation 'org.jsoup:jsoup:1.8.3'
+    implementation 'com.google.android.play:core:1.9.1'
+}
